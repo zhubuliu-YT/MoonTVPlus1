@@ -2,7 +2,7 @@
 
 'use client';
 
-import { Cat, Clover, Film, FolderOpen, Globe, Home, Star, Tv, Users } from 'lucide-react';
+import { Cat, Clover, Film, FolderOpen, Globe, Home, Star, Tv, TvMinimalPlay, Users } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -51,7 +51,7 @@ const MobileBottomNav = ({ activePath }: MobileBottomNavProps) => {
       href: '/douban?type=show',
     },
     {
-      icon: Tv,
+      icon: TvMinimalPlay,
       label: '电视直播',
       href: '/live',
     },
@@ -89,7 +89,7 @@ const MobileBottomNav = ({ activePath }: MobileBottomNavProps) => {
         href: '/douban?type=show',
       },
       {
-        icon: Tv,
+        icon: TvMinimalPlay,
         label: '电视直播',
         href: '/live',
       },
