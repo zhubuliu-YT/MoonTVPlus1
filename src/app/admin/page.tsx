@@ -37,7 +37,6 @@ import {
   FolderOpen,
   Globe,
   Mail,
-  Music,
   Palette,
   Settings,
   Tv,
@@ -7773,7 +7772,7 @@ const ThemeConfigComponent = ({
 };
 
 // 音乐配置组件
-const MusicConfigComponent = ({
+export const MusicConfigComponent = ({
   config,
   refreshConfig,
 }: {
@@ -12954,7 +12953,6 @@ function AdminPageClient() {
     liveSource: false,
     webLive: false,
     siteConfig: false,
-    musicConfig: false,
     registrationConfig: false,
     categoryConfig: false,
     configFile: false,
@@ -13291,21 +13289,6 @@ function AdminPageClient() {
                 fetchUsersV2={fetchUsersV2}
                 userListLoading={userListLoading}
               />
-            </CollapsibleTab>
-
-            {/* 音乐配置标签 */}
-            <CollapsibleTab
-              title='音乐配置'
-              icon={
-                <Music
-                  size={20}
-                  className='text-gray-600 dark:text-gray-400'
-                />
-              }
-              isExpanded={expandedTabs.musicConfig}
-              onToggle={() => toggleTab('musicConfig')}
-            >
-              <MusicConfigComponent config={config} refreshConfig={fetchConfig} />
             </CollapsibleTab>
 
             {/* 视频源配置标签 */}
